@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas 5 Javascript Rachmat Ashari</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="gambar-container">
+      <div id="div1">Sapi</div>
+      <div id="div2">Bebek</div>
+      <div id="div3">Macan</div>
+    </section>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+      var sapi = new Audio();
+      sapi.src = "audio/sapi.mp3";
+      var bebek = new Audio();
+      bebek.src = "audio/bebek.mp3";
+      var macan = new Audio();
+      macan.src = "audio/macan.mp3";
+
+      $("document").ready(function () {
+        $("#div1").mouseover(function () {
+          $(this).css({
+            background: "url('https://www.blibli.com/friends-backend/wp-content/uploads/2023/06/B600201-Cover-Perbedaan-Sapi-Madura-dan-Sapi-Bali.jpg')",
+          });
+          sapi.play();
+        });
+        $("div").mouseout(function () {
+          $(this).css({
+            background: "purple",
+          });
+        });
+        $("#div2").mouseover(function () {
+          $(this).css({
+            background: "url('https://cdn1-production-images-kly.akamaized.net/U5SpXCTzsz9R5eb2IbAbnLvaicA=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/1242699/original/010305600_1464028587-wallpaper_lucu.jpg')",
+          });
+          bebek.play();
+        });
+        $("#div3").mouseover(function () {
+          $(this).css({
+            background: "url('https://www.dbs.com/spark/index/id_id/site/assets/images/repository/articles/keuangan-di-tahun-macan-air.jpg')",
+          });
+          macan.play();
+        });
+      });
+    </script>
+  </body>
+</html>
